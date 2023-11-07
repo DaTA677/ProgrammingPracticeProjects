@@ -4,18 +4,20 @@ set(PROJECT_NAME constProject)
 # Source groups
 ################################################################################
 
-#set(Header_Files
-#
-#)
-#source_group("Header Files" FILES ${Header_Files})
+set(Header_Files
+    "PracticeClass.h"
+)
+source_group("Header Files" FILES ${Header_Files})
 
 set(Source_Files
     "Main.cpp"
+    "PracticeClass.cpp"
 )
 
 source_group("Source Files" FILES ${Source_Files})
 
 set(ALL_FILES
+    ${Header_Files}
     ${Source_Files}
 )
 

@@ -1,92 +1,29 @@
 #include<iostream>
-#include "Sorting.h"
-#include "BubbleSorting.h"
-#include "OptimizedBubbleSorting.h"
-#include "OutPlaceMergeSort.h"
-
 #include<chrono>
 
 int main() {
-	while (true) {
-		//Input list size
-		int size;
-		std::cout << "Enter the number of items in the list:";
-		std::cin >> size;
 
-		////Input elements of list
-		//std::vector<int> list;
-		//list.reserve(size);
-		//for (int i = 0; i < size; i++) {
-		//	int temp;
-		//	std::cout << "Enter the #"<<(i+1)<< " item of the list : ";
-		//	std::cin >> temp;
-		//	list.push_back(temp);
-		//}
+	std::cout << "::Practice for constant::" << std::endl;
 
-		//int size = 20;
-		std::vector<int> list(size);
-		
-		for (int i = 0; i < size; i++) {
-			list[i]=rand();
-		}
-		std::vector<int> list2 = list;
-		std::vector<int> list3 = list;
+	const int a = 0;
+	//a = 5; error as constant variable cannot be modified
 
+	int b = 1;
 
+	const int* c = &a; //pointer to const integer;
+	//(*c) = 12; cannot modify the value stored in the reference
+	c = &b;//can modify the reference stored in the variable
+	//*c = 12; even if the reference bound is non-const, cannot modify the value
 
-		//Sorting the list with bubble sort
-		Algorithms::Sorting* sorter = new Algorithms::BubbleSorting();
-		auto start = std::chrono::steady_clock::now();
-		sorter->Sort(list,false);
-		auto end= std::chrono::steady_clock::now();
-		delete sorter;
-		//Displaying the sorted list
-		std::cout << "After sorting the list using Bubble Sort:";
+	int* const d = &b;//const pointer to interger-- interpreted by the compiler as int (*const) d-> const to the (*)pointer and not the datatype
+	//int *const d = &a;// cannot store contant value to a constant pointer
 
-		for (int i = 0; i < size; i++) {
-			std::cout << list[i] << "\t";
-		}
-		std::cout <<std::endl<< "Time Taken by normal Bubble Sort:"<< ((end-start).count()/100)<<"ms"<<std::endl;
-		
+	*d = 15;//can update value since pointer is constant and not the value
 
-		//Sorting the list with Optimized bubble sort
-		sorter = new Algorithms::OptimizedBubbleSorting();
-		start = std::chrono::steady_clock::now();
-		sorter->Sort(list2, false);
-		end = std::chrono::steady_clock::now();
-		delete sorter;
+	int const e = 20;// for variables const can be present on either side of the datatype
+	//e = 21; const 
 
-		//Displaying the sorted list
-		std::cout << "After sorting the list using Optimized Bubble Sort:";
-
-		for (int i = 0; i < size; i++) {
-			std::cout << list2[i] << "\t";
-		}
-		std::cout << "Time Taken by Optimized Bubble Sort:" << ((end - start).count() / 100) << "ms" << std::endl;
-		
-		//Sorting the list with OutPlaceMergeSort
-		sorter = new Algorithms::OutPlaceMergeSort();
-		start = std::chrono::steady_clock::now();
-		sorter->Sort(list3);
-		end = std::chrono::steady_clock::now();
-		delete sorter;
-
-		//Displaying the sorted list
-		std::cout << "After sorting the list using OutPlaceMergeSort:";
-
-		for (int i = 0; i < size; i++) {
-			std::cout << list3[i] << "\t";
-		}
-		std::cout << "Time Taken by Optimized Bubble Sort:" << ((end - start).count() / 100) << "ms" << std::endl;
-
-		//Input to continue
-		std::string choice="N";
-		std::cout <<std::endl <<std::endl<<"Try again?(Y/N):";
-		std::cin >> choice;
-
-		if (strcmp(choice.c_str(), "Y")!=0) {
-			break;
-		} 
-		
-	}
+	const int* const f = &a;// const ponter to const
+	//f = d; cannot update the pointer
+	//*f = 12; cannot update the value
 }
