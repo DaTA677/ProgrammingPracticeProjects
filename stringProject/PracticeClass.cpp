@@ -31,3 +31,21 @@ std::string PracticeClass::EncodeString(const std::string& in)
 
 	return out;
 }
+
+bool PracticeClass::IsPalindrome(const std::string& in)
+{
+	for (int i = 0; i < in.size() / 2; i++) {
+		if (in[i] != in[in.size() - 1 - i])
+			return false;
+	}
+	return true;
+}
+
+bool PracticeClass::IsPalindromeCaseInsensitive(const std::string& in)
+{
+	for (int i = 0; i < in.size() / 2; i++) {
+		if (std::toupper(in[i]) != std::toupper(in[in.size() - 1 - i]))
+			return false;
+	}
+	return true;
+}
