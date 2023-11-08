@@ -1,5 +1,6 @@
 #include<iostream>
 #include<chrono>
+#include "PracticeClass.h"
 
 int main() {
 
@@ -26,4 +27,10 @@ int main() {
 	const int* const f = &a;// const ponter to const
 	//f = d; cannot update the pointer
 	//*f = 12; cannot update the value
+
+	PracticeClass classRef;
+	std::cin >> classRef;
+
+	std::cout << classRef;
+
 }
