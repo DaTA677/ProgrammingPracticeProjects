@@ -43,4 +43,6 @@ int main() {
 	std::cout << "The string, anna, " << (obj->IsPalindromeCaseInsensitive("anna") ? "is " : "is not ") << "a Palindrome" << std::endl;
 	std::cout << "The string, Anna, " << (obj->IsPalindromeCaseInsensitive("Anna") ? "is " : "is not ") << "a Palindrome" << std::endl;
 
+
+	delete obj;
 }
