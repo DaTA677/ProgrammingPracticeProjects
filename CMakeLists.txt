@@ -60,5 +60,6 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 ################################################################################
 add_subdirectory(constProject)
 add_subdirectory(stringProject)
+add_subdirectory(vectorProject)
 #add_subdirectory(Testing)
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT constProject)
