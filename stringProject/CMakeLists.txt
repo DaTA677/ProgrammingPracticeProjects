@@ -5,13 +5,13 @@ set(PROJECT_NAME stringProject)
 ################################################################################
 
 set(Header_Files
-    #"PracticeClass.h"
+    "PracticeClass.h"
 )
 source_group("Header Files" FILES ${Header_Files})
 
 set(Source_Files
     "Main.cpp"
-#    "PracticeClass.cpp"
+    "PracticeClass.cpp"
 )
 
 source_group("Source Files" FILES ${Source_Files})
