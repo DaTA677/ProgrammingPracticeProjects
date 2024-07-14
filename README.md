@@ -5,7 +5,7 @@ Visual Studio projects.
 
 # constProject:
 
-Contains [main.cpp](/constProject/main.cpp) file that showcases the use of keyword "const" in
+Contains [Main.cpp](/constProject/Main.cpp) file that showcases the use of keyword "const" in
 different scenarios like:
 
 -   Const variable
@@ -64,7 +64,7 @@ Projects to showcase different sorting algorithms
 
 -   [OutPlaceMergeSort](/Sorting/OutPlaceMergeSort.cpp) -\> sorts using temp arrays for merge sort
 
--   [OptimisedBubbleSort](/Sorting/OptimisedBubbleSort) -\> Sorts using bubble sort with a check for
+-   [OptimisedBubbleSorting](/Sorting/OptimisedBubbleSorting.cpp) -\> Sorts using bubble sort with a check for
     sorted list at each iteration
 
 SortingTesting contains [Main.cpp](/SortingTesting/Main.cpp) which shows how to invoke the sorting
