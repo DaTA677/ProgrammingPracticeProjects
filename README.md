@@ -5,7 +5,7 @@ Visual Studio projects.
 
 # constProject:
 
-Contains main.cpp file that showcases the use of keyword "const" in
+Contains [main.cpp](/constProject/main.cpp) file that showcases the use of keyword "const" in
 different scenarios like:
 
 -   Const variable
@@ -31,7 +31,7 @@ involving functions and class member variables:
 
 ## stringProject
 
-Project to showcase various operations done on strings in C++ like:
+Project to showcase following operations done on strings in C++ [here](/stringProject/PracticeClass.cpp):
 
 -   ReverseString
 
@@ -41,7 +41,7 @@ Project to showcase various operations done on strings in C++ like:
 
 ## vectorProject
 
-Project to showcase various operations done on vectors in C++ like:
+Project to showcase various operations done on vectors in C++ like [here](/vectorProject/PracticeClass.cpp) :
 
 -   Reversing a vector
 
@@ -53,20 +53,20 @@ Project to showcase various operations done on vectors in C++ like:
 
 Projects to showcase different sorting algorithms
 
--   Sorting.h -\> Base class
+-   [Sorting.h](/Sorting/Sorting.h) -\> Base class
 
--   BubbleSorting -\> Sorts using bubble sort
+-   [BubbleSorting](/Sorting/BubbleSorting.cpp) -\> Sorts using bubble sort
 
--   InsertionSort -\> Sorts using insertion sort
+-   [InsertionSort](/Sorting/InsertionSort.cpp) -\> Sorts using insertion sort
 
--   MergeSort-\> base class for merge sort . --TO DO in-place merge
+-   [MergeSort](/Sorting/MergeSort.h) -\> abstract base class for merge sort . --TO DO in-place merge
     sort---
 
--   OutPlaceMergeSort -\> sorts using temp arrays for merge sort
+-   [OutPlaceMergeSort](/Sorting/OutPlaceMergeSort.cpp) -\> sorts using temp arrays for merge sort
 
--   OptimisedBubbleSort -\> Sorts using bubble sort with a check for
+-   [OptimisedBubbleSort](/Sorting/OptimisedBubbleSort) -\> Sorts using bubble sort with a check for
     sorted list at each iteration
 
-SortingTesting contains Main.cpp which shows how to invoke the sorting
+SortingTesting contains [Main.cpp](/SortingTesting/Main.cpp) which shows how to invoke the sorting
 functions and also time-comparison between the different algorithms
 based on the array size.
